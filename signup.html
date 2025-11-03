@@ -1,114 +1,105 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Sign-In</title>
-    <style>
-        body {
-            background: linear-gradient(#fcf2ed, #92d4d4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign-In | HeartSpace</title>
 
-        .mother-div {
-            background-color: white;
-            border-radius: 30px;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .logo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            font-weight: 800;
-            color: #374151;
-            font-size: 1.25rem;
-        }
-
-        .heart {
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            background: linear-gradient(#f575a5, #acbaf1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .sign-btn {
-            background: linear-gradient(#f575a5, #acbaf1);
-        }
-
-        hr {
-            border-top: 3px solid black;
-        }
-    </style>
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="signup.css" />
 </head>
 
 <body>
-    <div class="mother-div w-50">
-        <div class="logo">
-            <div class="heart"> <img src="./solar--heart-bold.png" alt=""></div>
-            <h4>HeartSpace</h4>
-        </div>
-        <p>Welcome back to your safe space</p>
-        <button class="sign-btn btn rounded rounded-3 p-1 w-50 border-0">Sign Up</button>
-        <div class="w-75">
-            <label for="Name">Your Name</label> <br>
-            <input type="text" class="w-100" placeholder="Enter your Name"> <br>
-            <label for="email">Your Email</label> <br>
-            <input type="email" class="w-100" placeholder="Enter your Email"> <br>
-            <label for="gender">Your Gender</label> <br>
-            <select name="" id="" class="w-100">
-                <option value="">Male</option>
-                <option value="">Female</option>
-                <option value="">Rather not say</option>
-            </select> <br>
-            <div class="mb-3">
-                <label for="goal" class="form-label">Why are you joining HeartSpace?</label>
-                <select id="goal" name="goal" class="form-control mb-2">
-                    <option value="">Select one...</option>
-                    <option value="healing">Healing</option>
-                    <option value="growth">Personal Growth</option>
-                    <option value="faith">Faith Journey</option>
-                    <option value="relationships">Relationships</option>
-                    <option value="support">Community Support</option>
-                </select>
-                <textarea id="goalDetails" name="goalDetails" class="form-control" rows="2"
-                    placeholder="You can share more about your goal if you’d like..."></textarea>
-            </div>
-
-            <label for="password">Password</label> <br>
-            <input type="password" class="w-100" placeholder="Enter your Password">
-        </div>
-        <button class="sign-btn btn rounded rounded-3 p-1 w-75 border-0 mt-2">Sign Up</button>
-        <i class="text-muted mt-4">"Healing Begins where honesty lives"</i>
-        <div class="d-flex align-items-center my-3">
-            <hr class="">
-            <small class="text-muted mx-2">Or continue with</small>
-            <hr class="">
-        </div>
-        <div class="w-100 d-flex gap-5 justify-content-center">
-            <button
-                class="w-25 btn rounded rounded-2 bg-white border-2 border-black text-black d-flex align-items-center justify-content-center gap-2"><img
-                    src="./material-icon-theme--google.png" alt=""> Google</button>
-            <button
-                class="w-25 btn rounded rounded-2 bg-white border-2 border-black text-black d-flex align-items-center justify-content-center gap-2"><img
-                    src="./logos--facebook.png" alt="">Facebook</button>
-        </div>
+  <div class="mother-div">
+    <div class="logo">
+      <div class="heart">
+        <img src="./solar--heart-bold.png" alt="Heart Icon" />
+      </div>
+      <h4>HeartSpace</h4>
     </div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+
+    <p class="text-muted mb-3">Welcome to your safe space 💖</p>
+
+    <button class="sign-btn btn rounded-3 p-1 w-75 border-0 mb-3">
+      Sign Up
+    </button>
+
+    <div class="form-section w-75">
+      <label for="Name">Your Name</label>
+      <input type="text" id="Name" class="form-control mb-3" placeholder="Enter your Name" />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" class="form-control mb-3" placeholder="Enter your Email" />
+
+      <label for="gender">Your Gender</label>
+      <select id="gender" class="form-select mb-3">
+        <option value="">Select...</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Rather not say</option>
+      </select>
+
+      <label for="goal" class="form-label">Why are you joining HeartSpace?</label>
+      <select id="goal" name="goal" class="form-select mb-2">
+        <option value="">Select one...</option>
+        <option value="healing">Healing</option>
+        <option value="growth">Personal Growth</option>
+        <option value="faith">Faith Journey</option>
+        <option value="relationships">Relationships</option>
+        <option value="support">Community Support</option>
+      </select>
+
+      <textarea
+        id="goalDetails"
+        name="goalDetails"
+        class="form-control mb-3"
+        rows="2"
+        placeholder="You can share more about your goal if you’d like..."
+      ></textarea>
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        class="form-control mb-4"
+        placeholder="Enter your Password"
+      />
+    </div>
+
+    <button class="sign-btn btn rounded-3 p-1 w-75 border-0">
+      Sign Up
+    </button>
+
+    <i class="text-muted mt-3 quote">"Healing begins where honesty lives."</i>
+
+    <div class="divider my-3">
+      <hr />
+      <small class="text-muted mx-2">Or continue with</small>
+      <hr />
+    </div>
+
+    <div class="social-buttons">
+      <button class="social-btn">
+        <img src="./material-icon-theme--google.png" alt="Google Logo" /> Google
+      </button>
+      <button class="social-btn">
+        <img src="./logos--facebook.png" alt="Facebook Logo" /> Facebook
+      </button>
+    </div>
+  </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"
+  ></script>
+</body>
 
 </html>
