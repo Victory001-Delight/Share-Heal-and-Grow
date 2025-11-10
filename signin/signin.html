@@ -5,21 +5,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-In | HeartSpace</title>
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <link rel="stylesheet" href="signup.css" />
+    <link rel="stylesheet" href="../signup/signup.css"/>
 </head>
 
 <body>
     <div class="mother-div">
         <div class="logo">
             <div class="heart">
-                <img src="./solar--heart-bold.png" alt="Heart Icon" />
+                <img src="../images/solar--heart-bold.png" alt="Heart Icon" />
             </div>
             <h4>HeartSpace</h4>
         </div>
 
         <p class="text-muted mb-3">Welcome back to your safe space 💖</p>
+        <p id="showError" style="display: none" class="alert alert-danger p-2 text-center text-danger w-100"> 🚫 Please
+            fill in all inputs 💖</p>
+            <p id="showIncorrect" style="display: none" class="alert alert-danger p-2 text-center text-danger w-100">❌ Email or password is incorrect.</p>
         <div class="form-section w-75">
             <label for="email">Email</label>
             <input type="email" id="email" class="form-control mb-3" placeholder="Enter your Email" />
@@ -37,11 +41,11 @@
 
 
 
-            <button class="sign-btn btn rounded-3 p-1 w-100 border-0 mb-3">Sign In</button>
+            <button onclick="signIn()" class="sign-btn btn rounded-3 p-1 w-100 border-0 mb-3">Sign In</button>
 
             <p class="small text-center text-muted">
                 Don’t have an account?
-                <a href="signup.html" class="text-decoration-none">Create one</a>
+                <a href="../signup/signup.html" class="text-decoration-none">Create one</a>
             </p>
         </div>
 
@@ -55,10 +59,10 @@
 
         <div class="social-buttons">
             <button class="social-btn">
-                <img src="./material-icon-theme--google.png" alt="Google Logo" /> Google
+                <img src="../images/material-icon-theme--google.png" alt="Google Logo" /> Google
             </button>
             <button class="social-btn">
-                <img src="./logos--facebook.png" alt="Facebook Logo" /> Facebook
+                <img src="../images/logos--facebook.png" alt="Facebook Logo" /> Facebook
             </button>
         </div>
     </div>
@@ -66,6 +70,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="signin.js"></script>
 </body>
 
 </html>
