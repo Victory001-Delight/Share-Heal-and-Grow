@@ -10,10 +10,11 @@ const signIn = () => {
             alert(`Welcome back Lovie 💕`)
             email.value = ''
             password.value = ''
-            window.location.href = "../dashboard/index.html"
+            window.location.href = "/index.html"
         } else {
             showIncorrect.style.display = 'block'
+             window.location.href = "signin.html"
         }
 
     }
-}
+};

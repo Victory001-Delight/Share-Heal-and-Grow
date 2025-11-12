@@ -25,6 +25,6 @@ const signUp = () => {
         userName.value = ''
         email.value = ''
         password.value = ''
-        window.location.href = "../dashboard/index.html"
+        window.location.href = "/index.html"
     }
 };
