@@ -13,7 +13,12 @@ const signIn = () => {
             window.location.href = "/index.html"
         } else {
             showIncorrect.style.display = 'block'
-             window.location.href = "signin.html"
+            email.value = ''
+            password.value = ''
+            setTimeout(() => {
+                showIncorrect.style.display = 'none'
+            }, 2000) 
+            //  window.location.href = "signin.html"
         }
 
     }

@@ -9,8 +9,14 @@ if (localStorage.getItem("healGrowUsers")) {
 const signUp = () => {
     if (userName.value === "" || email.value === "" || password.value === "") {
         showError.style.display = "block";
+        setTimeout(() => {
+                showError.style.display = 'none'
+            }, 2000)
+            userName.value = ''
+            email.value = ''
+            password.value = ''
     } else {
-        showError.style.display = "none";
+        // showError.style.display = "none";
         alert(`Welcome ${userName.value} 💕 We love you`);
 
         const newUser = {
@@ -25,6 +31,6 @@ const signUp = () => {
         userName.value = ''
         email.value = ''
         password.value = ''
-        window.location.href = "/index.html"
+        window.location.href = "../signin/signin.html"
     }
 };
